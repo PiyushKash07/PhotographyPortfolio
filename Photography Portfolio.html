@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photography Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      
+      background: url(CoverPhoto.png) right no-repeat;
+      background-color:black;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    nav {
+      background-color: #222;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .gallery {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery a img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery a img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .lightbox:target {
+      display: block;
+    }
+
+    .lightbox img {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #222;
+      color: white;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    /* Responsive text */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .gallery {
+        padding: 20px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>John Doe Photography</h1>
+  </header>
+
+  <nav>
+    <a href="GalleryPg.html">Gallery</a>
+    <a href="ContactPg.html">Contact</a>
+  </nav>
+
+  <section id="gallery" class="gallery">
+    <a href="#img1"><img src="Nature.jpg" alt="Nature Photo" /></a>
+    <a href="#img2"><img src="Landscap.jpeg" alt="Landscape" /></a>
+    <a href="#img3"><img src="Portrait.jpg" alt="Portrait" /></a>
+    <a href="#img4"><img src="City.jpg" alt="City" /></a>
+    <a href="#img5"><img src="Animal.jpg" alt="Animals" /></a>
+    <a href="#img6"><img src="Travel.jpg" alt="Travel" /></a>
+  </section>
+
+  <!-- Lightbox modals -->
+  <div id="img1" class="lightbox">
+    <a href="#gallery" class="lightbox-close">&times;</a>
+    <img src="Nature.jpg" alt="Nature">
+  </div>
+  <div id="img2" class="lightbox">
+    <a href="#gallery" class="lightbox-close">&times;</a>
+    <img src="Landscap.jpeg" alt="Landscape">
+  </div>
+  <div id="img3" class="lightbox">
+    <a href="#gallery" class="lightbox-close">&times;</a>
+    <img src="Portrait.jpg"Portrait">
+  </div>
+  <div id="img4" class="lightbox">
+    <a href="#gallery" class="lightbox-close">&times;</a>
+    <img src="City.jpg" alt="City">
+  </div>
+  <div id="img5" class="lightbox">
+    <a href="#gallery" class="lightbox-close">&times;</a>
+    <img src="Animal.jpg" alt="Animals">
+  </div>
+  <div id="img6" class="lightbox">
+    <a href="#gallery" class="lightbox-close">&times;</a>
+    <img src="Travel.jpg" alt="Travel">
+  </div>
+
+  <footer id="contact">
+    <p>Contact: johndoe@example.com | Instagram: @johnphotography</p>
+    <p>&copy; 2025 John Doe Photography</p>
+  </footer>
+
+</body>
+</html>
